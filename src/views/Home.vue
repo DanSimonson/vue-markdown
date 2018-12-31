@@ -27,11 +27,14 @@ export default {
   },
   data() {
     return {
-      input: `# Welcome to my React Markdown Previewer!
-## This is a sub-heading...
-### And here\'s some other cool stuff: 
+      input: `# Welcome to my Vue Markdown Previewer!
+# This is a sub-heading
+## This is a sub-heading
+### And another sub-heading
 
-Heres some code, \`<div></div>\`, between 2 backticks.
+here\'s some more markdown: 
+
+code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
@@ -43,22 +46,25 @@ function anotherExample(firstLine, lastLine) {
 }
 \`\`\`
   
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
+You can also make text **bold**
+Or make text _italic_.
+Or make text **_both!_**
+you can ~~cross stuff out~~.
 
-There's also [links](https://www.freecodecamp.com), and
+There's also [links](https://www.freecodecamp.com)
+
+and block quotes:
+
 > Block Quotes!
 
-And if you want to get really crazy, even tables:
+tables:
 
 Wild Header | Crazy Header | Another Header?
 ------------ | ------------- | ------------- 
 Your content can | be here, and it | can be here....
 And here. | Okay. | I think we get it.
 
-- And of course there are lists.
+- More lists.
   - Some are bulleted.
      - With different indentation levels.
         - That look like this.
@@ -76,7 +82,6 @@ And here. | Okay. | I think we get it.
   computed: {
     viewMarkdown() {
       return marked(this.input);
-      /*![Vue.js Image](${url})`{ breaks: true, anchorTargetBlank: true } */
     }
   },
   methods: {
