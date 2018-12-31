@@ -8,6 +8,7 @@
       <textarea v-model="input" id="editor"></textarea>
       <div id="preview" v-html="viewMarkdown"></div>
     </div>
+    <Footer/>
   </div>
 </template>
 
@@ -16,14 +17,13 @@
 // eslint-disable-next-line
 //import HelloWorld from "@/components/HelloWorld.vue";
 import url from "../assets/logo.png";
+import Footer from "@/components/Footer.vue";
 
 export default {
   // eslint-disable-next-line
   name: "home",
   components: {
-    // eslint-disable-next-line
-    //HelloWorld
-    // eslint-disable-next-line
+    Footer
   },
   data() {
     return {
@@ -206,5 +206,10 @@ textarea {
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3) inset;
+}
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>
