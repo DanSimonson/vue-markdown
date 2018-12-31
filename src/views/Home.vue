@@ -100,6 +100,7 @@ And here. | Okay. | I think we get it.
   grid-auto-rows: minmax(200px, auto);
   max-width: 960px;
   grid-gap: 2px;
+  margin: 0 auto;
 }
 
 textarea {
